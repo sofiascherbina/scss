@@ -1,0 +1,11 @@
+%modal-outline{
+    outline: solid 1px $hover;
+    border: none;
+}
+%buttons{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    background-color: $hover;
+}
