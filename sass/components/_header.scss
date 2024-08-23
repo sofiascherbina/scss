@@ -52,11 +52,23 @@
 .header-address{
     @extend .nav-ul;
     &li:hover{
-        .address_el{
+        +.address_el{
             color:$hover;
         }
-        .address-svg{
+        +.address-svg{
             fill:$hover;
         }
     }
+}
+.address_el{
+   @include fonts($font-weight:500);
+    color: $grey-text;
+    text-decoration: none;
+   @include transition();
+}
+.address-svg{
+    vertical-align: middle;
+    fill:$grey-text;
+    margin-right: 10px;
+    @include transition($property:fill)
 }

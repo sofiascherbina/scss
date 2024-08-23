@@ -1,0 +1,115 @@
+.hero{
+    @include fonts();
+    background-image:linear-gradient( 
+        /* to bottom, */
+        rgba(47,48,58,0.4),
+        rgba(130,132,160,0.4)),
+    url(/img/hero-background.png);
+    height: 600px;
+    padding-top: 200px;
+    background-size: cover;
+}
+.solution{
+    @include fonts($font-size:44px, $font-weight:900);
+    color: $white;  
+    text-align: center; 
+}
+.features{
+    @include fonts();
+    display: inline-flex;
+    gap: 30px;
+    margin-top: 95px;
+    height: 284px;
+& h4{
+    @include fonts($font-weight:700);
+    color:$dark-text;
+    margin-bottom: 0px;
+}
+& p{
+    color:$grey-text;
+    line-height: 20px;
+}
+}
+.features_li{
+    width: calc((100% - 60px) /4);
+    height: 72px;
+&::before{
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background-size: contain;
+    background-color:$soft-background;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    background-position: center;
+}
+}    
+$icons: 'antenna', 'astronaut' ,'clock', 'diagram';
+    @each $icons-items in $icons{
+    .features_li-#{$icons-items}::before{
+        background-image: url("/img/#{$icons-items}.svg");
+    }
+}
+.main-h2{
+    @include fonts($font-size:36px, $font-weight:700);
+    color:$dark-text;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.activities{
+    display:flex;
+    gap: 30px;
+}
+.activities_li{
+    width: calc((100% - 60px) /3);
+    position: relative;
+    height: 294px;
+&-overlay{
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+& p{
+    @include fonts($font-weight:700);
+    color: $white;
+    text-align: center;
+    margin: 0px;
+}
+}
+}
+.team{
+    background-color:$soft-background;
+    margin-top: 90px;
+    padding: 95px 0;
+}
+.team-container{
+    display: flex;
+    gap: 30px;
+}
+.team-members{
+    width: calc((100% - 60px) /3);
+    box-shadow: 0 2px 2px rgba(117, 117, 117, 0.3) ;
+    line-height: 0px; 
+    border-radius: 5px;
+& h5{   
+    @include fonts($font-size:16px, $font-weight: 500);
+    text-align: center;
+    margin: 0px;
+    padding-top: 35px;
+}
+& p{
+    @include fonts($font-size:16px);
+    color:$grey-text;
+    text-align: center;
+    margin-bottom: 0px;
+}
+}
+.team-info{
+    background-color:$white;
+    line-height: 17px;
+}

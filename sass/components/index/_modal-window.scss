@@ -1,0 +1,141 @@
+.modal-open-btn{   
+    @include fonts($font-size:16px, $font-weight:700);
+    @include  modal-border($border:none); 
+    display: block;
+    margin: 0 auto;
+    background-color:$hover;
+    color:$white;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+.no-scroll{
+    overflow:visible;
+}
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;    
+    z-index: 1;
+}
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;   
+}
+.modal{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    min-width: 528px;
+    min-height: 581px;
+    transform: translate(-50% -50%);
+    padding-top: 9px;
+    background-color:$white;
+}
+.modal-close-btn{
+    width: 30px;
+    height: 30px;
+    margin-left: 490px;
+    padding: 4px 4px;
+
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    background-color: $white;
+}
+.close-btn-svg{
+    width: 18px;
+    height: 18px;
+    @include transition( $property: fill);
+    &:hover{
+        fill:$hover;
+        cursor: pointer;
+    } 
+}
+.form-container{
+    width: 448px;
+    margin: 0px auto;
+& h1{
+    @include fonts($font-size:20px, $font-weight:700);
+    text-align: center;
+}
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.enter{
+    @include fonts($font-size:12px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    position: relative;
+}
+.modal-form_el{
+    height: 40px;
+    padding: 10px 37px;
+    @include modal-border();
+
+    @include transition($property: outline border cursor);
+&:focus{
+    @extend %modal-outline;
+    + .modal-input-svg{
+    fill:$hover;
+    }  
+}
+&:hover{
+    cursor: pointer;
+}
+}
+.modal-input-svg{
+    position:absolute;
+    left: 15px;
+    bottom: 10px;
+    width:  18px;
+    height: 18px;
+
+@include transition($property:fill);
+}
+.modal-form_comment{
+    height: 120px;
+    padding: 10px 15px;
+    resize: none;
+    @include modal-border();
+
+    @include transition($property:border);
+&:focus{
+    @extend %modal-outline;
+}
+}
+.checkbox{
+    @include fonts();
+    color: $grey-text;
+    margin: 20px auto;
+& input{
+    width: 16px;
+    height: 15px;
+    border: solid 5px $black;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+& a{
+    color: $hover; 
+}
+}
+.send-form{
+    @include modal-border($border:none);
+    width: 200px;
+    height: 50px;
+    background-color:$hover;
+    box-shadow: 0px 2px 5px $grey-text;
+    margin: 32px auto;
+    cursor: pointer;
+
+    @include fonts($font-size:16px, $font-weight:700);
+    color:$white;
+}
