@@ -1,0 +1,84 @@
+.topic{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 105px;
+    margin-bottom: 50px;
+}
+.topic-el{
+    @include fonts($font-weight:500);
+    color:$dark-text;
+
+    background-color: #F5F4FA;
+    border-color: #F5F4FA;
+    padding: 9px 22px;
+    border-radius: 4px;
+    border: none;
+    cursor:pointer;
+
+    @include transition($property:color background-color box-shadow);
+&:hover{
+    color:$white;
+    background-color:$hover;
+    box-shadow: 0px 2px 4px $grey-text;    
+}
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 85px;
+}
+.project-el{
+    position: relative;
+    width: calc( (100% - 60px) /3);
+    height: 404px;
+    margin-bottom: 30px;
+    line-height: 0px; 
+    overflow: hidden; 
+&:hover{
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;    
+    
+    .hover-text{
+    display: block;  
+    animation-name: 'textAppear';
+    animation-duration: 1s;
+    animation-direction: alternate;
+    }
+}
+}
+.hover-text{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 294px;
+    background-color:rgba(33,150,243,0.9);
+    line-height: 25px;
+    padding: 63px 24px;
+& p{
+    @include fonts($font-size:18px);
+    color:$white;
+}
+}
+.project-text{  
+    background-color:$white;
+    border: solid 1px #EEEEEE;
+    height: 110px;
+    line-height: 15px;
+
+    position: relative;
+    z-index: 1;
+& h5{
+    @include fonts($font-size:18px, $font-weight:700);
+    padding-left: 24px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+& p{
+    @include fonts($font-size:16px);
+    color: $grey-text;
+    padding-left: 24px;
+}
+}

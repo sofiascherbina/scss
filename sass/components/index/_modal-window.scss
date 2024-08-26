@@ -1,6 +1,6 @@
 .modal-open-btn{   
     @include fonts($font-size:16px, $font-weight:700);
-    @include  modal-border($border:none); 
+    @include border($border:none); 
     display: block;
     margin: 0 auto;
     background-color:$hover;
@@ -79,7 +79,7 @@
 .modal-form_el{
     height: 40px;
     padding: 10px 37px;
-    @include modal-border();
+    @include border();
 
     @include transition($property: outline border cursor);
 &:focus{
@@ -105,7 +105,7 @@
     height: 120px;
     padding: 10px 15px;
     resize: none;
-    @include modal-border();
+    @include border();
 
     @include transition($property:border);
 &:focus{
@@ -128,7 +128,7 @@
 }
 }
 .send-form{
-    @include modal-border($border:none);
+    @include border($border:none);
     width: 200px;
     height: 50px;
     background-color:$hover;

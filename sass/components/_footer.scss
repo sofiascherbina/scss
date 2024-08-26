@@ -1,0 +1,71 @@
+footer{
+    background-color:$first-color;
+    color:$white;
+    padding: 60px 0;
+
+& .container{
+    display: flex;
+    gap: 85px;
+}
+& .address_el, & .logo{
+    color: $white;
+}
+& .address_el:hover{
+    color:$hover;
+}
+}
+.address{ 
+     margin-top: 24px;
+     line-height: 30px;
+}
+.footer-links {
+&p{
+    @include fonts($font-weight:700);
+    letter-spacing: 2px;
+    margin: 12px 0px 20px;
+}
+& .social-links{
+    background-color:$first-color;
+    padding: 0px;
+& li{
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover{
+        background-color:$hover;
+    }
+}
+}
+& .social-links_el{
+    fill:$white;
+}
+}
+.footer-form{
+    position: relative;
+}
+.footer-sending { 
+& p{
+    @include fonts($font-weight:700);
+    margin: 12px 0px;
+}
+}
+.footer-input{
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    @include border($color: rgba(255, 255, 255, 0.3));
+    margin-right: 6px;
+    padding-left: 15px;
+}
+.footer-submit{
+    width: 200px;
+    height: 50px;
+    padding: 18px 28px 18px 0px;
+    @include border($border:none);
+
+    @extend %buttons;
+}
+.send-svg{
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    fill:$white;
+}

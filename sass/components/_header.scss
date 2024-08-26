@@ -51,11 +51,11 @@
 }
 .header-address{
     @extend .nav-ul;
-    &li:hover{
-        +.address_el{
+    & li:hover{
+        .address_el{
             color:$hover;
         }
-        +.address-svg{
+        .address-svg{
             fill:$hover;
         }
     }
@@ -71,4 +71,7 @@
     fill:$grey-text;
     margin-right: 10px;
     @include transition($property:fill)
+}
+.outline{
+    @include border($color:rgb(236, 236, 236));
 }

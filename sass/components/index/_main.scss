@@ -113,3 +113,64 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     background-color:$white;
     line-height: 17px;
 }
+.social-links{
+    display: flex;
+    gap: 10px;
+    padding: 15px 32px 30px;
+    background-color:$white;
+& li{
+    height: 44px;
+    width: 44px;
+    border-radius: 30px;
+    @include transition($property:background-color);
+&:hover{
+    background-color: $hover;
+    .social-links_el{
+        fill:$white;
+}
+}
+}
+}
+.social-links_el{
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill:$svg-color; 
+    margin: 12px auto;
+    @include transition($property:fill);
+}
+.customers{
+    padding: 95px 0px;
+& p{
+    @include fonts($font-size:36px, $font-weight:700);
+    color:$dark-text;
+    margin: 0px;
+    text-align: center;
+}
+}
+.customers_ul{
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+}
+.customers_li{
+    width: 170px;
+    height: 92px;
+    @include border($color:$svg-color);
+
+    @include transition($property:border-color cursor);
+&:hover{
+    @include border($color:$hover);
+    cursor: pointer;
+    .customers-icons{
+        fill:$hover;
+    }
+}
+}
+.customers-icons{
+    display: block;
+    margin: 20px auto;
+    fill:$svg-color;
+
+    @include transition($property:fill);
+}
