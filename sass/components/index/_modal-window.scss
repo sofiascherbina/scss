@@ -28,12 +28,20 @@
 .modal{
     position: absolute;
     top: 10%;
-    left: 30%;
-    min-width: 528px;
-    min-height: 581px;
+    left: 0%;
+    min-width: 450px;
+    min-height: 609px;
     transform: translate(-50% -50%);
     padding-top: 9px;
     background-color:$white;
+}
+@media screen and (min-width:1024px) {
+    .modal{
+        top: 10%;
+        left: 30%;
+        min-width: 528px;
+        min-height: 581px;
+    }
 }
 .modal-close-btn{
     width: 30px;

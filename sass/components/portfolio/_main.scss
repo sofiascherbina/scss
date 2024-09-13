@@ -1,9 +1,21 @@
 .topic{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-top: 105px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+@media screen and (max-width:768px) {
+    .topic{
+        width: 326px;
+    }
+}
+@media screen and (min-width:1024px) {
+    .topic{
+           justify-content: center; 
+           margin-top: 105px;
+           margin-bottom: 50px;
+    }
 }
 .topic-el{
     @include fonts($font-weight:500);
@@ -26,16 +38,25 @@
 .projects{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    margin-bottom: 85px;
+    margin-bottom: 60px;
+}
+@media screen and (min-width:1024px) {
+    .projects{
+        margin-bottom: 85px;
+    }
 }
 .project-el{
     position: relative;
-    width: calc( (100% - 60px) /3);
+    width: 450px;
     height: 404px;
     margin-bottom: 30px;
     line-height: 0px; 
     overflow: hidden; 
+& img{
+    width: 450px;
+}
 &:hover{
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;    
@@ -47,6 +68,11 @@
     animation-direction: alternate;
     }
 }
+}
+@media screen and (min-width:1024px) {
+    .project-el{
+         width: calc( (100% - 60px) /3);
+    }
 }
 .hover-text{
     display: none;
