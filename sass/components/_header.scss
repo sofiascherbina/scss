@@ -1,7 +1,11 @@
 .header-items{
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+    justify-content:space-between;
+}
+@media screen and (min-width:1200px) {
+    .header-items{
+         align-items:baseline;
+    }
 }
 .logo{
     font-family: 'Raleway';
@@ -17,6 +21,17 @@
 .navigation {
     display: none;
 }
+@media screen and (min-width:768px){
+    .navigation{
+        display: flex;  
+        justify-content:space-between;
+        margin-left: 85px;
+        width: 519px;
+        &:focus-within{
+            margin-bottom: 0px;
+        }
+    }
+}
 @media screen and (min-width:1200px) {
     .navigation{
     display: flex;  
@@ -31,6 +46,9 @@
 .nav-ul{
         display: flex;
         gap: 50px;
+        margin-top: 30px;
+        align-self: center;
+        padding-top: 7px;
     }
 .nav-ul_el{
     @include fonts($font-weight:500);
@@ -56,6 +74,7 @@
 }
 .header-address{
     @extend .nav-ul;
+    
     & li:hover{
         .address_el{
             color:$hover;
@@ -63,6 +82,22 @@
         .address-svg{
             fill:$hover;
         }
+    }
+}
+@media screen and (min-width:768px) {
+    .header-address{
+        flex-direction: column;
+        gap: 0;
+        line-height: 30px;
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .header-address{
+        flex-direction:row;
+        gap: 30px;
+        // line-height: 30px;
+        // margin-top: 0px;
     }
 }
 .address_el{
@@ -80,3 +115,22 @@
 .outline{
     @include border($color:rgb(236, 236, 236));
 }
+.menu-toggle {
+    min-height: 40px; 
+    min-width: 40px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    margin: 0;  
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;  
+    border: none;
+    // border-radius: 50%;  
+    outline: none;
+    }
+    @media (min-width: 768px) {  
+      .menu-toggle {
+      display: none;  
+    }
+    }

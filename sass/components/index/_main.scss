@@ -4,15 +4,27 @@
         /* to bottom, */
         rgba(47,48,58,0.4),
         rgba(130,132,160,0.4)),
-    url(/img/hero-background.png);
+    url(/img/hero-bg.png);
     height: 400px;
     background-position: center;
-    background-size: cover;
+    background-size:contain;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+@media (min-device-pixel-ratio: 2),
+ (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+    .hero{
+        background-image:linear-gradient( 
+            /* to bottom, */
+            rgba(47,48,58,0.4),
+            rgba(130,132,160,0.4)),
+        url(/img/hero-bg@2x.png);
+        background-size: cover;
+    }
 }
 @media screen and (min-width:1200px) {
     .hero{
@@ -25,15 +37,15 @@
     color: $white;  
     text-align: center; 
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     .solution{
      @include fonts($font-size:44px, $font-weight:900);   
     }
 }
 .features{
-    display: inline-flex;
+    display:flex;
     flex-direction: column;
-    padding: 55px 0px 0px;
+    margin-top: 60px;
     // margin: 60px 0;
     // height: 284px;
 & h4{
@@ -48,17 +60,26 @@
     line-height: 25px;
 }
 }
-@media screen and (min-width:1024px){
+@media screen and (min-width:768px){
     .features{
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
-        gap: 30px;
-        padding: 55px 0px;
+        flex-wrap: wrap;
+        row-gap:30px;
+        column-gap:30px;
+        margin: 60px auto;
+        width: 740px;
+    }
+}
+@media screen and (min-width:1200px){
+    .features{
+        width:auto;
     }
 }
 .features_li{
     width: 450px;
     line-height: 10px;
+
 &::before{
     display: block;
     content: "";
@@ -74,10 +95,19 @@
     background-position: center;
 }
 } 
-@media screen and (min-width:1024px){
+@media screen and (min-width:768px){
     .features_li{
-        width: calc((100% - 60px) /4);
-        height: 72px;
+        // width: calc((100% - 30px) /2);
+        width: 354px;
+&::before{
+    width:354px;
+}
+    }
+}
+@media screen and (min-width:1200px){
+    .features_li{
+        width: calc((100% - 90px) /4);
+        width: 270px;
 &::before{
     width: 270px;
 }
@@ -92,7 +122,7 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
 .main-h2_adaptive{
     display: none;
 }
-@media screen and (min-width:1024px){
+@media screen and (min-width:1200px){
     .main-h2_adaptive{
         display: block;
     }
@@ -103,7 +133,7 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     text-align: center;
     margin-bottom: 50px;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     .main-h2{
         @include fonts($font-size:28px, $font-weight:700);
     }
@@ -114,7 +144,7 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
 .activities{
     display: none;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
 .activities{
     display:flex;
     gap: 30px;
@@ -143,16 +173,17 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     background-color:$soft-background;
     padding: 60px 0;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     .team{
         padding: 95px 0;
         margin-top: 90px;
     }  
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
     .team-container{
         display: flex;
         gap: 30px;
+        flex-wrap: wrap;
     }
 }
 .team-members{
@@ -173,7 +204,16 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     margin-bottom: 0px;
 }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
+    .team-members{
+        width: calc((100% - 30px) /2);
+& img{
+        height:374px;
+        width:354px;
+       }
+    }
+}
+@media screen and (min-width:1200px) {
     .team-members{
         width: calc((100% - 90px) /4);
 & img{
@@ -206,11 +246,6 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
 }
 }
 }
-@media screen and (min-width:1024px) {
-    .social-links{
-        padding: 15px 32px 30px;
-    }
-}
 .social-links_el{
     display: block;
     width: 20px;
@@ -234,7 +269,7 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     gap: 30px;
     margin-top: 60px;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     .customers_ul{
         display: flex;
         gap: 30px;
@@ -255,7 +290,12 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
     }
 }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
+    .customers_li{
+        width: calc((100% - 60px)/3);
+    }
+}
+@media screen and (min-width:1200px) {
     .customers_li{
         width: 170px;
     }

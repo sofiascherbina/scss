@@ -5,12 +5,13 @@
     margin-top: 60px;
     margin-bottom: 40px;
 }
-@media screen and (max-width:768px) {
-    .topic{
-        width: 326px;
-    }
-}
-@media screen and (min-width:1024px) {
+// @media screen and (max-width:768px) {
+//     .topic{
+//         display: flex;
+//         width: 326px;
+//     }
+// }
+@media screen and (min-width:768px) {
     .topic{
            justify-content: center; 
            margin-top: 105px;
@@ -42,7 +43,12 @@
     gap: 30px;
     margin-bottom: 60px;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:768px) {
+    .projects{
+        margin-bottom: 85px;
+    }
+}
+@media screen and (min-width:1200px) {
     .projects{
         margin-bottom: 85px;
     }
@@ -54,9 +60,6 @@
     margin-bottom: 30px;
     line-height: 0px; 
     overflow: hidden; 
-& img{
-    width: 450px;
-}
 &:hover{
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;    
@@ -69,10 +72,30 @@
     }
 }
 }
-@media screen and (min-width:1024px) {
+@media screen and (max-width:767px) {
+    .project-el{
+         width:354px;
+& img{
+    width: 450px;
+    }
+    }
+}
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .project-el{
+         width:354px;
+& img{
+    width: 354px;
+    }
+&:nth-child(9){
+    width: 354px;
+    right:200px;
+    }
+    }
+}
+@media screen and (min-width:1200px) {
     .project-el{
          width: calc( (100% - 60px) /3);
-    }
+    } 
 }
 .hover-text{
     display: none;
