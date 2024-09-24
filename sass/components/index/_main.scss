@@ -7,7 +7,8 @@
     url(/img/hero-bg.png);
     height: 400px;
     background-position: center;
-    background-size:contain;
+    background-size:cover;
+    background-repeat: no-repeat;
     
     display: flex;
     flex-direction: column;
@@ -24,11 +25,17 @@
             rgba(130,132,160,0.4)),
         url(/img/hero-bg@2x.png);
         background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 @media screen and (min-width:1200px) {
     .hero{
         height: 600px; 
+        background-image:linear-gradient( 
+            /* to bottom, */
+            rgba(47,48,58,0.4),
+            rgba(130,132,160,0.4)),
+        url(/img/hero-background.png);
         // padding-top: 200px;
     }
 }
@@ -48,17 +55,6 @@
     margin-top: 60px;
     // margin: 60px 0;
     // height: 284px;
-& h4{
-    @include fonts($font-weight:700);
-    color:$dark-text;
-    margin-bottom: 0px;
-    text-align: center;
-}
-& p{
-    @include fonts();
-    color:$grey-text;
-    line-height: 25px;
-}
 }
 @media screen and (min-width:768px){
     .features{
@@ -80,6 +76,16 @@
     width: 450px;
     line-height: 10px;
 
+& h4{
+    @include fonts($font-weight:700);
+    color:$dark-text;
+    margin-bottom: 0px;
+}
+& p{
+    @include fonts();
+    color:$grey-text;
+    line-height: 25px;
+}
 &::before{
     display: block;
     content: "";
@@ -94,11 +100,17 @@
     background-size: 70px 70px;
     background-position: center;
 }
+}
+@media screen and (max-width:767px){
+    .features_li{
+& h4{
+    text-align: center;
+}
+    }
 } 
 @media screen and (min-width:768px){
     .features_li{
-        // width: calc((100% - 30px) /2);
-        width: 354px;
+        width: calc((100% - 30px) /2);
 &::before{
     width:354px;
 }
@@ -107,7 +119,6 @@
 @media screen and (min-width:1200px){
     .features_li{
         width: calc((100% - 90px) /4);
-        width: 270px;
 &::before{
     width: 270px;
 }
@@ -215,7 +226,8 @@ $icons: 'antenna', 'astronaut' ,'clock', 'diagram';
 }
 @media screen and (min-width:1200px) {
     .team-members{
-        width: calc((100% - 90px) /4);
+        // width: calc((100% - 90px) /4);
+        width: 270px;
 & img{
         height: 270px;
         width: 270px;

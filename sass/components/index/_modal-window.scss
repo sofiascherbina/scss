@@ -145,7 +145,7 @@
 .checkbox{
     @include fonts($font-size:12px);
     color: $grey-text;
-    margin: 20px auto;
+    margin: 10px auto 20px;
 & input{
     width: 16px;
     height: 15px;
@@ -168,7 +168,7 @@
     height: 50px;
     background-color:$hover;
     box-shadow: 0px 2px 5px $grey-text;
-    margin: 22px auto;
+    margin: 0 auto;
     cursor: pointer;
 
     @include fonts($font-size:16px, $font-weight:700);

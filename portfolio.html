@@ -31,6 +31,25 @@
         <div class="container">  
             <div class="header-items"> 
                <a class="logo" href="#"><span class="logo-decor-text">Web</span>Studio</a>
+               <button 
+               class="menu-toggle js-open-menu" 
+               aria-expanded="false" 
+               aria-controls="mobile-menu" 
+             > 
+               <svg 
+                 width="24" 
+                 height="24" 
+                 fill="currentColor" 
+                 viewBox="0 0 20 20" 
+                 xmlns="http://www.w3.org/2000/svg" 
+               > 
+                 <path 
+                   fill-rule="evenodd" 
+                   d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" 
+                   clip-rule="evenodd" 
+                 ></path> 
+               </svg> 
+             </button>
                 <div class="navigation">
                    <ul class="nav-ul">        
                        <li><a href="#" class="nav-ul_el">Cтудія</a></li>
@@ -64,7 +83,12 @@
         </nav>
         <ul class="projects" >
                 <li class="project-el">
-                    <img src="./img2/p1.png" alt="Технокряк" height="294px">
+                    <!-- <img src="./img2/img.png" srcset="./img2/img1.png 480w, ./img2/img1@2x.png 768w" alt="Технокряк" height="294px"> -->
+                    <picture>
+                        <source srcset="./img2/tablet-img1.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img1.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img1.png" alt="Технокряк" height="294"/>
+                       </picture>
                     <div class="project-text">
                         <h5>Технокряк</h5>
                         <p>Веб-сайт</p>
@@ -72,7 +96,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p2.png" alt="Постер New Orlean vs Golden Star" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img2.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img2.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img2.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Постер New Orlean vs Golden Star</h5>
                         <p>Дизайн</p>
@@ -80,7 +108,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p3.png" alt="Ресторан Seafood" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img3.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img3.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img3.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Ресторан Seafood</h5>
                         <p>Додаток</p>
@@ -88,7 +120,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p4.png" alt="Проєкт Prime" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img4.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img4.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img4.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Проєкт Prime</h5>
                         <p>Маркетинг</p>
@@ -96,7 +132,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p5.png" alt="Проєкт Boxes" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img5.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img5.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img5.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Проєкт Boxes</h5>
                         <p>Додаток</p>
@@ -104,7 +144,11 @@
                    <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p6.png" alt="Веб-сайт" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img6.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img6.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img6.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Inspiration has no Borders</h5>
                         <p>Веб-сайт</p>
@@ -112,7 +156,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p7.png" alt="Дизайн" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img7.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img7.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img7.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Видання Limited Edition</h5>
                         <p>Дизайн</p>
@@ -120,7 +168,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p8.png" alt="Проєкт LAB" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img8.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img8.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img8.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Проєкт LAB</h5>
                         <p>Маркетинг</p>
@@ -128,7 +180,11 @@
                     <div class="hover-text"><p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p></div>
                 </li>
                 <li class="project-el">
-                    <img src="./img2/p9.png" alt="Growing Business" height="294px">
+                    <picture>
+                        <source srcset="./img2/tablet-img9.png" media="(min-width: 768px)" />
+                        <source srcset="./img2/desktop-img9.png" media="(min-width:1200px)"  />
+                        <img src="./img2/mobile-img9.png" alt="Технокряк" height="294"/>
+                    </picture>
                     <div class="project-text">
                         <h5>Growing Business</h5>
                         <p>Додаток</p>
@@ -177,5 +233,49 @@
             </div>
         </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu"> 
+        <button class="menu-toggle js-close-menu"> 
+          <svg class="js-close-menu_svg"
+            fill="currentColor" 
+            viewBox="0 0 20 20" 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+          > 
+            <path 
+              fill-rule="evenodd" 
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" 
+              clip-rule="evenodd" 
+            ></path> 
+          </svg> 
+        </button> 
+   
+        <ul class="mobile-menu"> 
+          <li><a href="" class="link">Студія</a></li> 
+          <li><a href="" class="link">Портфоліо</a></li> 
+          <li><a href="" class="link">Контакти</a></li> 
+        </ul>
+        <ul class="mobile-address">
+            <li>
+                <a href="tel:+380-096-111-11-11" class="address_el"> +38 096 111 11 11</a>
+            </li>
+            <li>
+                <a href="email:info@devstudio.com" class="address_el">info@devstudio.com </a>
+            </li>
+        </ul> 
+        <ul class="mobile-networks">
+            <li><a class="mobile-networks_el">Instagram</a></li>
+            <li><a class="mobile-networks_el">Twitter</a></li>
+            <li><a class="mobile-networks_el">Facebook</a></li>
+            <li><a class="mobile-networks_el">LinkedIn</a></li>
+        </ul>
+      </div>
+    <script 
+  defer 
+  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" 
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" 
+  crossorigin="anonymous" 
+></script> 
+<script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>

@@ -55,24 +55,24 @@
 }
 .project-el{
     position: relative;
-    width: 450px;
     height: 404px;
+    width:450px;
     margin-bottom: 30px;
     line-height: 0px; 
     overflow: hidden; 
+& img{
+    width:100%;
+    }
 &:hover{
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;    
     
     .hover-text{
-    display: block;  
-    animation-name: 'textAppear';
-    animation-duration: 1s;
-    animation-direction: alternate;
+        bottom:0;
     }
 }
 }
-@media screen and (max-width:767px) {
+@media screen and (min-width:767px) {
     .project-el{
          width:354px;
 & img{
@@ -94,15 +94,17 @@
 }
 @media screen and (min-width:1200px) {
     .project-el{
-         width: calc( (100% - 60px) /3);
+         width: calc( (100% - 90px) /3);
+& img{
+   width:370px;
+   }
     } 
 }
 .hover-text{
-    display: none;
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 294px;
+    bottom: -100%;
+    transition: 1s all;
+    height:100%;
     background-color:rgba(33,150,243,0.9);
     line-height: 25px;
     padding: 63px 24px;
